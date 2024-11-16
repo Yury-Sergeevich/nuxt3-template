@@ -1,7 +1,7 @@
 <template>
   <button @click="toggleTheme" class="toggleTheme">
-    <span v-if="isDark" class="iconDark"></span>
-    <span v-else class="iconLight"></span>
+    <nuxt-icon v-if="isDark" name="moon" filled></nuxt-icon>
+    <nuxt-icon v-else name="sun" filled></nuxt-icon>
   </button>
 </template>
 
@@ -24,20 +24,14 @@ function toggleTheme() {
   font-size: 12px;
 }
 
-.iconDark,
-.iconLight {
-  display: block;
+.nuxt-icon svg {
   width: 24px;
   height: 24px;
+  display: block;
 }
 
 .iconDark {
-  background: yellow;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-
-.iconLight {
-  background: orangered;
+  width: 24px;
+  height: 24px;
 }
 </style>
